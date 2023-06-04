@@ -240,7 +240,8 @@ nav>ul>li>a {
 }
 
 .plant-details {
-    color: #fff;
+    color: black;
+    font-size: 1.25rem;
     margin-top: 10px;
     text-align: center;
 }
@@ -284,23 +285,28 @@ nav>ul>li>a {
 .contacto {
     background-color: #f2f2f2;
     padding: 20px;
-    margin: 60px 20px 60px 20px;
+    margin: 60px auto;
+    max-width: 400px;
     border-radius: 5px;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contacto h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 2rem;
 }
 
 .contacto ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 .contacto li {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .contacto a {
@@ -312,18 +318,19 @@ nav>ul>li>a {
     text-decoration: underline;
 }
 
+
 /* Footer */
 .footer {
     background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer p {
+}
+
+.footer p {
     margin: 0;
-  }
-  
+}
+
 @media screen and (max-width: 768px) {
     * {
         max-width: 750px;
@@ -372,4 +379,9 @@ nav>ul>li>a {
         font-size: 1.5rem;
     }
 
+}
+
+.activo{
+    font-weight: bold;
+    text-decoration-line: underline;
 }
