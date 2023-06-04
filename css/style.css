@@ -1,0 +1,375 @@
+* {
+    box-sizing: border-box;
+
+    @font-face {
+        font-family: 'Poppins';
+        src: url('fonts/Poppins-Regular.ttf') format('truetype');
+    }
+
+    font-family: 'Poppins',
+    sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    padding-top: 106px;
+}
+
+/* Encabezado y barra de navegacion */
+header {
+    max-width: 1580px;
+    max-height: 106px;
+    margin: 0 10px 0 10px;
+    padding: 18px;
+    display: flex;
+    justify-content: space-evenly;
+    z-index: 101;
+}
+
+header::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 106px;
+    background-color: #fff;
+    /* Use rgba for transparency */
+    position: absolute;
+    top: 0;
+    left: -10px;
+    z-index: 99;
+    border-radius: .5rem;
+}
+
+#sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: inline-flex;
+    font-size: 2rem;
+    width: 30%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-img {
+    height: 50px;
+    border-radius: 25px;
+}
+
+nav {
+    width: 70%;
+    z-index: 101;
+}
+
+nav>ul {
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+nav>ul>li>a {
+    color: #151515;
+}
+
+/* Inicio */
+.inicio {
+    width: 100%;
+    margin: 0;
+    padding: 18px;
+    padding-top: 50px;
+    background-image: url("../img/img1.jpg");
+    height: calc(100vh - 106px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.inicio::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(100vh - 106px);
+    background-color: rgba(21, 21, 21, 0.5);
+    /* Use rgba for transparency */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.inicio-content {
+    position: relative;
+    z-index: 2;
+    /* Added z-index to place the content above the pseudo-element */
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1580px;
+    border: solid;
+    border-color: #fff;
+    border-radius: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 0 100px;
+}
+
+.inicio h2 {
+    color: white;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.inicio p {
+    color: white;
+    font-size: 2rem;
+}
+
+
+/* Productos */
+.productos {
+    text-align: center;
+    max-width: 1580;
+}
+
+.productos>h2 {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+.productos>p {
+    margin: 10px auto 10px auto;
+    font-size: 1.5rem;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-back {
+    background-color: #b8e994;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.plant-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.plant-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.plant-price {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.plant-details {
+    color: #fff;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Sobre Nosotros */
+.sobre-nosotros::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: calc(-100vw/2);
+    width: calc(100vw + 100vw/2);
+    height: calc(100% + 50px);
+    background-color: #b8e994;
+    z-index: -1;
+}
+
+.sobre-nosotros {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 20px auto 20px auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sobre-nosotros>h2 {
+    font-size: 3rem;
+}
+
+.sobre-nosotros>h3 {
+    font-size: 2.7rem;
+}
+
+.sobre-nosotros>p {
+    font-size: 1.8rem;
+}
+
+/* Contacto */
+.contacto {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 60px 20px 60px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.contacto h2 {
+    margin-bottom: 10px;
+}
+
+.contacto ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contacto li {
+    margin-bottom: 5px;
+}
+
+.contacto a {
+    color: blue;
+    text-decoration: none;
+}
+
+.contacto a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+@media screen and (max-width: 768px) {
+    * {
+        max-width: 750px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    header {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    nav>ul {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    nav>ul>li>a {
+        font-size: 1.3rem;
+    }
+
+    .inicio-content {
+        padding: 10px;
+        margin: auto;
+    }
+
+    .inicio h2 {
+        font-size: 3rem;
+    }
+
+    .inicio p {
+        font-size: 1.5rem;
+    }
+
+}
