@@ -1,13 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Geologica', sans-serif;
+}
 
-    @font-face {
-        font-family: 'Poppins';
-        src: url('fonts/Poppins-Regular.ttf') format('truetype');
-    }
-
-    font-family: 'Poppins',
-    sans-serif;
+a,
+h1,
+h2,
+h3,
+p {
+    font-family: 'Geologica', sans-serif;
 }
 
 a {
@@ -15,10 +18,12 @@ a {
 }
 
 body {
+    background-color: aliceblue;
     width: 100vw;
     margin: 0;
     padding: 0;
     padding-top: 106px;
+    overflow-x: hidden;
 }
 
 /* Encabezado y barra de navegacion */
@@ -37,7 +42,7 @@ header::after {
     display: block;
     width: 100%;
     height: 106px;
-    background-color: #fff;
+    background-color: #4af3c9;
     /* Use rgba for transparency */
     position: absolute;
     top: 0;
@@ -49,7 +54,7 @@ header::after {
 #sticky-header {
     position: sticky;
     top: 0;
-    background-color: white;
+    /* background-color: white; */
     z-index: 100;
 }
 
@@ -251,16 +256,19 @@ nav>ul>li>a {
     content: "";
     position: absolute;
     top: -15px;
-    left: calc(-100vw/2);
-    width: calc(100vw + 100vw/2);
+    left: -10%;
+    /* left: calc(-100vw/2); */
+    /* width: calc(100vw + 100vw/2); */
+    width: 120%;
     height: calc(100% + 50px);
     background-color: #b8e994;
     z-index: -1;
+    border-radius: 5%;
 }
 
 .sobre-nosotros {
     position: relative;
-    width: 100%;
+    width: 70%;
     max-width: 750px;
     margin: 20px auto 20px auto;
     text-align: center;
@@ -269,16 +277,20 @@ nav>ul>li>a {
     gap: 10px;
 }
 
-.sobre-nosotros>h2 {
+.sobre-nostros-apartado>h2 {
     font-size: 3rem;
 }
 
-.sobre-nosotros>h3 {
+.sobre-nostros-apartado>h3 {
     font-size: 2.7rem;
 }
 
-.sobre-nosotros>p {
+.sobre-nostros-apartado>p {
     font-size: 1.8rem;
+}
+
+.icon{
+    font-size: 5rem;
 }
 
 /* Contacto */
@@ -381,7 +393,10 @@ nav>ul>li>a {
 
 }
 
-.activo{
+.activo {
     font-weight: bold;
-    text-decoration-line: underline;
+    /* text-decoration-line: underline; */
+    background-color: #fff;
+    padding: 2px;
+    border-radius: 5px;
 }
